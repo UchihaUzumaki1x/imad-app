@@ -13,13 +13,14 @@ var articleOne = {
   content: `<p>Today I started working on my First Webpage.</p>
             <p>And here It is. My first webpage in front of you.</p>
                 <div>
-            <p>It was really a fun thing to this task.</p>
-                `
-}; 
+            <p>It was really a fun thing to this task.</p>`
+                
+};
+
 function createTemplate (data) {
     var title = data.title;
-    var heading = data.heading;
     var date = data.date;
+    var heading = data.heading;
     var content = data.content;
     var htmlTemplate = `
     <html>
@@ -57,7 +58,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function (req,res) {
-  res.sendFile(createTemplate(articleOne));
+  res.send(createTemplate(articleOne));
 });
 
 app.get('/article-two', function (req,res) {
