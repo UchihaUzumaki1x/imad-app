@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var content = {
+var articleOne = {
   title: 'Article One | Ankit Profile',
   heading: 'Aryicle One',
   date: 'August 10, 2017',
