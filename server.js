@@ -13,9 +13,8 @@ var content = {
   content: `<p>Today I started working on my First Webpage.</p>
             <p>And here It is. My first webpage in front of you.</p>
                 <div>
-                <h4>
             <p>It was really a fun thing to this task.</p>
-                </h4>`
+                `
 }; 
 function createTemplate (data) {
     var title = data.title;
