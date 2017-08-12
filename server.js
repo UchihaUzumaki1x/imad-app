@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 
 var articles = {
-    articleOne : {
+    'article-one' : {
       title: 'Article One | Ankit Profile',
       heading: 'Article One',
       date: 'August 10, 2017',
@@ -17,7 +17,7 @@ var articles = {
                 <p>It was really a fun thing to this task.</p>`
                 
 },
-      articleTwo : {title: 'Article TWw | Ankit Profile',
+    'article-two' : {title: 'Article TWw | Ankit Profile',
       heading: 'Article Two',
       date: 'August 11, 2017',
       content: `<p>Today I started working on my Second Webpage.</p>
@@ -26,7 +26,7 @@ var articles = {
                 <p>It was really a fun thing to this task.</p>`
             
     },
-      articleThree : {title: 'Article Three | Ankit Profile',
+    'article-three' : {title: 'Article Three | Ankit Profile',
       heading: 'Article Three',
       date: 'August 12, 2017',
       content: `<p>Today I started working on my Third Webpage.</p>
@@ -77,16 +77,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function (req,res) {
-  res.send(createTemplate(articleOne));
-});
-
-app.get('/article-two', function (req,res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-
-app.get('/article-three', function (req,res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+app.get('/:articleName', function (req,res) {
+    // articleName == article-one
+    //articles[articleNmae] == {} content object for article one
+    var articleName = req.params.articleName;
+  res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
