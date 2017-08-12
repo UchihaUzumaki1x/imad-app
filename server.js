@@ -34,7 +34,7 @@ var articles = {
                     <div>
                 <p>It was really a fun thing to this task.</p>`
         
-    },
+    }
     };
 
 function createTemplate (data) {
