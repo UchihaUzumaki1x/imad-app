@@ -6,16 +6,36 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articleOne = {
-  title: 'Article One | Ankit Profile',
-  heading: 'Article One',
-  date: 'August 10, 2017',
-  content: `<p>Today I started working on my First Webpage.</p>
-            <p>And here It is. My first webpage in front of you.</p>
-                <div>
-            <p>It was really a fun thing to this task.</p>`
+var articles = {
+    articleOne : {
+      title: 'Article One | Ankit Profile',
+      heading: 'Article One',
+      date: 'August 10, 2017',
+      content: `<p>Today I started working on my First Webpage.</p>
+                <p>And here It is. My first webpage in front of you.</p>
+                    <div>
+                <p>It was really a fun thing to this task.</p>`
                 
-};
+},
+      articleTwo : {title: 'Article TWw | Ankit Profile',
+      heading: 'Article Two',
+      date: 'August 11, 2017',
+      content: `<p>Today I started working on my Second Webpage.</p>
+                <p>And here It is. My second webpage in front of you.</p>
+                    <div>
+                <p>It was really a fun thing to this task.</p>`
+            
+    },
+      articleThree : {title: 'Article Three | Ankit Profile',
+      heading: 'Article Three',
+      date: 'August 12, 2017',
+      content: `<p>Today I started working on my Third Webpage.</p>
+                <p>And here It is. My third webpage in front of you.</p>
+                    <div>
+                <p>It was really a fun thing to this task.</p>`
+        
+    },
+    };
 
 function createTemplate (data) {
     var title = data.title;
