@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 
 var articleOne = {
   title: 'Article One | Ankit Profile',
-  heading: 'Aryicle One',
+  heading: 'Article One',
   date: 'August 10, 2017',
   content: `<p>Today I started working on my First Webpage.</p>
             <p>And here It is. My first webpage in front of you.</p>
