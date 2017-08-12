@@ -17,7 +17,7 @@ var articles = {
                 <p>It was really a fun thing to this task.</p>`
                 
 },
-    'article-two' : {title: 'Article TWw | Ankit Profile',
+    'article-two' : {title: 'Article Two | Ankit Profile',
       heading: 'Article Two',
       date: 'August 11, 2017',
       content: `<p>Today I started working on my Second Webpage.</p>
