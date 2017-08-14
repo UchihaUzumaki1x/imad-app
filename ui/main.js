@@ -1,9 +1,25 @@
 //Counter code
 var button = document.getElementById('counter');
-var counter = 0;
 
 button.onclick = function() {
-    counter = counter + 1;
-    var span = document.getElementById('count');
-    span.innerHtml = counter.toString();
+    
+    //Creat a request object
+    var request = new XMLHttpRequest();
+    
+    //Capture the response and state and store it in a varible
+    request.onreadystatechange = function () {
+      if (request.readystate === XMLHttpRequest.DONE) {
+          //Take some action
+          if (request.status === 200) {
+              var counter = request.responseText;
+              var span = document.getElementById('count');
+              span.innerHtml = counter.toString();
+          }
+      }
+      // Not done yet
+    };
+    
+    // Make the request
+    request.open('GET', 'http://imad.hasura.io/counter', true);
+    request.send(null);
 };
