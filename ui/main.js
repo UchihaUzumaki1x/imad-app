@@ -20,6 +20,6 @@ button.onclick = function() {
     };
     
     // Make the request
-    reuest.open('GET', 'https://imad.hasura.io/counter', true);
+    request.open('GET', 'https://imad.hasura.io/counter', true);
     request.send(null);
 };
