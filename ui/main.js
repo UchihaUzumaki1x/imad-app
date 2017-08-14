@@ -1,17 +1,25 @@
-console.log('Loaded!');
+//Counter code
+var button = document.getElementById('counter');
 
-//Change the text of the main-text dev
-var element = document.getElementById('main-text');
-
-element.innerHTML = 'Ankit Sharma';
-
-//Move the image
-var img = document.getElementById('madi');
-var marginLeft = 0;
-function moveRight () {
-    marginLeft = marginLeft + 1;
-    img.style.marginLeft = marginLeft + 'px';
-}
-img.onclick = function () {
-    var interval = setInterval(moveRight, 50);
+button.onclick = function() {
+    
+    //Creat a request object
+    var request = new XMLHttpRequest();
+    
+    //Capture the response and state and store it in a varible
+    request.onreadystatechange = function () {
+      if (request.readystate === XMLHttpRequest.DONE) {
+          //Take some action
+          if (request.status === 200) {
+              var counter = request.responseText;
+              var span = document.getElementById('count');
+              span.innerHtml = counter.toString();
+          }
+      }
+      // Not done yet
+    };
+    
+    // Make the request
+    reuest.open('GET', 'https://imad.hasura.io/counter', true);
+    request.send(null);
 };
