@@ -19,7 +19,7 @@ var articles = {
     'article-one' : {
       title: 'Article One | Ankit Profile',
       heading: 'Article One',
-      date: 'August 10, 2017',
+      date: 'September 19, 2018',
       content: `<p>Today I started working on my First Webpage.</p>
                 <p>And here It is. My first webpage in front of you.</p>
                     <div>
@@ -28,7 +28,7 @@ var articles = {
 },
     'article-two' : {title: 'Article Two | Ankit Profile',
       heading: 'Article Two',
-      date: 'August 11, 2017',
+      date: 'September 19, 2018',
       content: `<p>Today I started working on my Second Webpage.</p>
                 <p>And here It is. My second webpage in front of you.</p>
                     <div>
@@ -37,7 +37,7 @@ var articles = {
     },
     'article-three' : {title: 'Article Three | Ankit Profile',
       heading: 'Article Three',
-      date: 'August 12, 2017',
+      date: 'September 19, 2018',
       content: `<p>Today I started working on my Third Webpage.</p>
                 <p>And here It is. My third webpage in front of you.</p>
                     <div>
